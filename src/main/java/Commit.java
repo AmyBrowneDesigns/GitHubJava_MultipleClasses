@@ -3,7 +3,7 @@ public class Commit {
     private String description;
     private int uniqueID;
 
-    public Commit ( String description, int UniqueID){
+    public Commit ( String description, int uniqueID){
         this.description =description;
         this.uniqueID = uniqueID;
     }
@@ -17,6 +17,6 @@ public class Commit {
     }
 
     public int getUniqueID(){
-        return this.uniqueID;
+        return uniqueID;
     }
 }

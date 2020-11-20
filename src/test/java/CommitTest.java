@@ -19,6 +19,6 @@ public class CommitTest {
 
     @Test
     public void hasUniqueId(){
-        assertEquals(0, commit.getUniqueID());
+        assertEquals(20091987, commit.getUniqueID());
     }
 }
