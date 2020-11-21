@@ -4,11 +4,11 @@ public class GitHubAccount {
 
     private String username;
     private String name;
-    private String accountType;
+    private AccountType accountType;
     private int repo;
     private ArrayList<Repo> repos;
 
-    public GitHubAccount(String username, String name, String accountType, int repo) {
+    public GitHubAccount(String username, String name, AccountType accountType, int repo) {
         this.username = username;
         this.name = name;
         this.accountType = accountType;
@@ -29,18 +29,50 @@ public class GitHubAccount {
         return name;
     }
 
-    public void setName(String name) {//test this
-        this.name = name;
-    }
 
-    public String getAccountType(){
+
+    public AccountType getAccountType(){
         return accountType;
     }
+
+
+    public AccountType setAccountType(AccountType AccountType){
+        return this.accountType = AccountType;
+    }
+
+    public AccountType upgradeAccountType(AccountType AccountType){
+        return this.accountType = AccountType.PRO;
+    }
+
+
+//    public String upgradeAccountType(){
+//        switch(accountType){
+//            case "Pro":
+//                System.out.println("You're account is now upgraded");
+//                break;
+//        }
+//        return this.accountType;
+//    }
 
     public int getRepos(){
         return repo;
     }
+
     public int getNumberOfRepos(){
         return this.repos.size();
     }
+
+    public int repoCount() {
+        return this.repos.size();
+    }
+    public void addRepo(Repo repo){
+        this.repos.add(repo);
+    }
+
+    public Repo findRepo(String repoName) {
+        return repos.get(0);
+    }
+//    public Repo removeRepo(){
+//        return this.repos.remove(repo);
+//    }
 }

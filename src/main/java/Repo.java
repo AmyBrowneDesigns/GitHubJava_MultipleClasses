@@ -42,5 +42,22 @@ public class Repo {
         return commits.size();
     }
 
+    public int commitCount() {
+        return this.commits.size();
+    }
+
+    public void addCommit(Commit commit) {
+        this.commits.add(commit);
+    }
+
+    public Commit findCommitByUniqueID(int uniqueID){
+        Commit foundCommitByUniqueID = null;
+        for(Commit commit:this.commits){
+            if(commit.getUniqueID() == uniqueID){
+                foundCommitByUniqueID = commit;
+            }
+        }
+        return foundCommitByUniqueID;
+    }
 
 }
